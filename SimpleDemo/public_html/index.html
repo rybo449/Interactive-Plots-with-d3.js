@@ -1,383 +1,435 @@
+
+
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>Menu Bar</title>
+    <title>Instagram Trending Hashtags</title>
         <script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js"></script>
 
     <script type="text/javascript" src="d3/d3.js">
     </script>
+      <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">             
 
 </head>
 <body>
-
-<select id = "opts">
-<option value="ds1">data1</option>
-<option value="ds2">data2</option> 
-<option value="ds3">data3</option>
-  <!-- and so on... -->   
+<h1>Trending Instagram Hashtags per day in each Zip Code of New York City</h1>
+<select id = "opts2">
   
   
-<option value="dates1">2015-01-18</option>
-<option value="dates2">2015-01-19</option>
-<option value="dates3">2015-01-10</option>
-<option value="dates4">2015-01-11</option>
-<option value="dates5">2015-01-12</option>
-<option value="dates6">2015-01-13</option>
-<option value="dates7">2015-01-14</option>
-<option value="dates8">2015-01-15</option>
-<option value="dates9">2015-01-16</option>
-<option value="dates10">2015-01-17</option>
-<option value="dates11">2015-01-09</option>
-<option value="dates12">2015-01-08</option>
-<option value="dates13">2015-01-07</option>
-<option value="dates14">2015-01-06</option>
-<option value="dates15">2015-01-05</option>
-<option value="dates16">2015-01-04</option>
-<option value="dates17">2015-01-03</option>
-<option value="dates18">2015-01-02</option>
-<option value="dates19">2015-01-01</option>
-<option value="dates23">2014-11-30</option>
-<option value="dates25">2014-11-21</option>
-<option value="dates26">2014-11-20</option>
-<option value="dates27">2014-11-23</option>
-<option value="dates28">2014-11-22</option>
-<option value="dates29">2014-11-25</option>
-<option value="dates30">2014-11-24</option>
-<option value="dates31">2014-11-27</option>
-<option value="dates32">2014-11-26</option>
-<option value="dates33">2014-11-29</option>
-<option value="dates34">2014-11-28</option>
-<option value="dates35">2014-12-08</option>
-<option value="dates36">2014-12-09</option>
-<option value="dates37">2014-12-02</option>
-<option value="dates38">2014-12-03</option>
-<option value="dates39">2014-12-01</option>
-<option value="dates40">2014-12-06</option>
-<option value="dates41">2014-12-07</option>
-<option value="dates42">2014-12-04</option>
-<option value="dates43">2014-12-05</option>
-<option value="dates44">2014-11-14</option>
-<option value="dates45">2014-11-15</option>
-<option value="dates46">2014-11-16</option>
-<option value="dates47">2014-11-17</option>
-<option value="dates48">2014-11-10</option>
-<option value="dates49">2014-11-11</option>
-<option value="dates50">2014-11-12</option>
-<option value="dates51">2014-11-13</option>
-<option value="dates53">2014-11-18</option>
-<option value="dates54">2014-11-19</option>
-<option value="dates55">2014-12-19</option>
-<option value="dates56">2014-12-18</option>
-<option value="dates57">2014-12-11</option>
-<option value="dates58">2014-12-10</option>
-<option value="dates59">2014-12-13</option>
-<option value="dates60">2014-12-12</option>
-<option value="dates61">2014-12-15</option>
-<option value="dates62">2014-12-14</option>
-<option value="dates63">2014-12-17</option>
-<option value="dates64">2014-12-16</option>
-<option value="dates65">2014-12-28</option>
-<option value="dates66">2014-12-29</option>
-<option value="dates67">2014-12-24</option>
-<option value="dates68">2014-12-25</option>
-<option value="dates69">2014-12-26</option>
-<option value="dates70">2014-12-27</option>
-<option value="dates71">2014-12-20</option>
-<option value="dates72">2014-12-21</option>
-<option value="dates73">2014-12-22</option>
-<option value="dates74">2014-12-23</option>
-<option value="dates75">2014-12-31</option>
-<option value="dates76">2014-12-30</option>
-<option value="dates77">2015-01-21</option>
-<option value="dates78">2015-01-20</option>
-<option value="dates79">2015-01-22</option>
-<option value="dates80">20-11-04 0</option>
-<option value="dates81">2014-11-09</option>
-<option value="dates82">2014-11-08</option>
-<option value="dates83">2014-11-03</option>
-<option value="dates84">2014-11-07</option>
-<option value="dates85">2014-11-06</option>
-<option value="dates86">2014-11-05</option>
-<option value="dates87">2014-11-04</option>
+  
+<option value="2014-11-21">2014-11-21</option>
+<option value="2014-11-20">2014-11-20</option>
+<option value="2014-11-23">2014-11-23</option>
+<option value="2014-12-27">2014-12-27</option>
+<option value="2014-11-25">2014-11-25</option>
+<option value="2014-11-24">2014-11-24</option>
+<option value="2014-11-27">2014-11-27</option>
+<option value="2014-11-26">2014-11-26</option>
+<option value="2014-11-29">2014-11-29</option>
+<option value="2014-11-28">2014-11-28</option>
+<option value="2014-11-30">2014-11-30</option>
+<option value="2014-12-21">2014-12-21</option>
+<option value="2015-01-18">2015-01-18</option>
+<option value="2015-01-19">2015-01-19</option>
+<option value="2014-11-22">2014-11-22</option>
+<option value="2014-12-04">2014-12-04</option>
+<option value="2015-01-10">2015-01-10</option>
+<option value="2015-01-11">2015-01-11</option>
+<option value="2015-01-12">2015-01-12</option>
+<option value="2014-12-23">2014-12-23</option>
+<option value="2015-01-14">2015-01-14</option>
+<option value="2015-01-15">2015-01-15</option>
+<option value="2015-01-16">2015-01-16</option>
+<option value="2015-01-17">2015-01-17</option>
+<option value="2014-12-08">2014-12-08</option>
+<option value="2014-12-09">2014-12-09</option>
+<option value="2014-12-28">2014-12-28</option>
+<option value="2014-12-29">2014-12-29</option>
+<option value="2014-12-06">2014-12-06</option>
+<option value="2014-12-02">2014-12-02</option>
+<option value="2014-12-03">2014-12-03</option>
+<option value="2014-12-26">2014-12-26</option>
+<option value="2014-12-01">2014-12-01</option>
+<option value="2014-12-20">2014-12-20</option>
+<option value="2014-12-07">2014-12-07</option>
+<option value="2014-12-22">2014-12-22</option>
+<option value="2014-12-05">2014-12-05</option>
+<option value="2015-01-13">2015-01-13</option>
+<option value="2014-11-14">2014-11-14</option>
+<option value="2014-11-15">2014-11-15</option>
+<option value="2014-11-16">2014-11-16</option>
+<option value="2014-11-17">2014-11-17</option>
+<option value="2014-11-10">2014-11-10</option>
+<option value="2014-11-11">2014-11-11</option>
+<option value="2014-11-12">2014-11-12</option>
+<option value="2014-11-13">2014-11-13</option>
+<option value="2014-11-18">2014-11-18</option>
+<option value="2014-11-19">2014-11-19</option>
+<option value="2015-01-09">2015-01-09</option>
+<option value="2015-01-08">2015-01-08</option>
+<option value="2015-01-07">2015-01-07</option>
+<option value="2015-01-06">2015-01-06</option>
+<option value="2015-01-05">2015-01-05</option>
+<option value="2015-01-04">2015-01-04</option>
+<option value="2015-01-03">2015-01-03</option>
+<option value="2015-01-02">2015-01-02</option>
+<option value="2015-01-01" selected = "selected">2015-01-01</option>
+<option value="2014-12-19">2014-12-19</option>
+<option value="2014-12-18">2014-12-18</option>
+<option value="2014-12-31">2014-12-31</option>
+<option value="2014-12-30">2014-12-30</option>
+<option value="2015-01-21">2015-01-21</option>
+<option value="2015-01-20">2015-01-20</option>
+<option value="2015-01-22">2015-01-22</option>
+<option value="2014-12-11">2014-12-11</option>
+<option value="2014-12-10">2014-12-10</option>
+<option value="2014-12-13">2014-12-13</option>
+<option value="2014-12-12">2014-12-12</option>
+<option value="2014-12-15">2014-12-15</option>
+<option value="2014-12-14">2014-12-14</option>
+<option value="2014-12-17">2014-12-17</option>
+<option value="2014-12-16">2014-12-16</option>
+<option value="2014-12-24">2014-12-24</option>
+<option value="2014-11-09">2014-11-09</option>
+<option value="2014-11-08">2014-11-08</option>
+<option value="2014-12-25">2014-12-25</option>
+<option value="2014-11-03">2014-11-03</option>
+<option value="2014-11-07">2014-11-07</option>
+<option value="2014-11-06">2014-11-06</option>
+<option value="2014-11-05">2014-11-05</option>
+<option value="2014-11-04">2014-11-04</option>
   </select>     
 
-<select id = "opts">
-<option value="ds1">data1</option>
-<option value="ds2">data2</option> 
-<option value="ds3">data3</option>
-  <!-- and so on... --> 
+<select id = "opts1">
+
   
-  <option value="zips1">10069</option>
-<option value="zips2">10453</option>
-<option value="zips3">11230</option>
-<option value="zips4">10451</option>
-<option value="zips5">10457</option>
-<option value="zips6">10456</option>
-<option value="zips7">10455</option>
-<option value="zips8">10454</option>
-<option value="zips9">10459</option>
-<option value="zips10">10458</option>
-<option value="zips11">11232</option>
-<option value="zips12">10103</option>
-<option value="zips13">11233</option>
-<option value="zips14">11385</option>
-<option value="zips15">11234</option>
-<option value="zips16">11235</option>
-<option value="zips17">10307</option>
-<option value="zips18">11222</option>
-<option value="zips19">11237</option>
-<option value="zips21">10282</option>
-<option value="zips22">10280</option>
-<option value="zips23">10119</option>
-<option value="zips24">10115</option>
-<option value="zips25">10112</option>
-<option value="zips26">10110</option>
-<option value="zips27">10111</option>
-<option value="zips28">11109</option>
-<option value="zips29">11379</option>
-<option value="zips30">11378</option>
-<option value="zips31">10452</option>
-<option value="zips32">11375</option>
-<option value="zips33">11374</option>
-<option value="zips34">11377</option>
-<option value="zips35">11101</option>
-<option value="zips36">11371</option>
-<option value="zips37">11370</option>
-<option value="zips38">11373</option>
-<option value="zips39">11372</option>
-<option value="zips40">11102</option>
-<option value="zips41">11223</option>
-<option value="zips42">11103</option>
-<option value="zips44">10028</option>
-<option value="zips45">10040</option>
-<option value="zips46">11106</option>
-<option value="zips47">10029</option>
-<option value="zips48">10044</option>
-<option value="zips49">11201</option>
-<option value="zips50">11203</option>
-<option value="zips51">10128</option>
-<option value="zips52">11205</option>
-<option value="zips53">11204</option>
-<option value="zips54">11207</option>
-<option value="zips55">11206</option>
-<option value="zips56">11209</option>
-<option value="zips57">11208</option>
-<option value="zips58">10199</option>
-<option value="zips59">11225</option>
-<option value="zips60">11104</option>
-<option value="zips61">11368</option>
-<option value="zips62">11369</option>
-<option value="zips63">11366</option>
-<option value="zips64">11367</option>
-<option value="zips65">11364</option>
-<option value="zips66">11365</option>
-<option value="zips67">11362</option>
-<option value="zips68">11363</option>
-<option value="zips69">11360</option>
-<option value="zips70">11361</option>
-<option value="zips71">11221</option>
-<option value="zips72">10025</option>
-<option value="zips73">11220</option>
-<option value="zips74">11212</option>
-<option value="zips75">11213</option>
-<option value="zips76">11210</option>
-<option value="zips77">11211</option>
-<option value="zips78">11216</option>
-<option value="zips79">11217</option>
-<option value="zips80">11214</option>
-<option value="zips81">11215</option>
-<option value="zips82">10035</option>
-<option value="zips83">10034</option>
-<option value="zips84">11218</option>
-<option value="zips85">11219</option>
-<option value="zips86">10031</option>
-<option value="zips87">10030</option>
-<option value="zips88">10033</option>
-<option value="zips89">10032</option>
-<option value="zips90">11359</option>
-<option value="zips91">11358</option>
-<option value="zips92">11005</option>
-<option value="zips93">11004</option>
-<option value="zips94">11697</option>
-<option value="zips95">11351</option>
-<option value="zips96">11357</option>
-<option value="zips97">11356</option>
-<option value="zips98">11355</option>
-<option value="zips99">11354</option>
-<option value="zips100">10039</option>
-<option value="zips101">11451</option>
-<option value="zips102">10038</option>
-<option value="zips103">10309</option>
-<option value="zips104">10308</option>
-<option value="zips105">10037</option>
-<option value="zips106">10306</option>
-<option value="zips107">10305</option>
-<option value="zips108">10304</option>
-<option value="zips109">10303</option>
-<option value="zips110">10302</option>
-<option value="zips111">10301</option>
-<option value="zips112">\xd9\</option>
-<option value="zips113">11229</option>
-<option value="zips114">11228</option>
-<option value="zips115">10026</option>
-<option value="zips116">10027</option>
-<option value="zips117">10024</option>
-<option value="zips118">11224</option>
-<option value="zips119">10022</option>
-<option value="zips120">10023</option>
-<option value="zips121">10020</option>
-<option value="zips122">10021</option>
-<option value="zips123">10036</option>
-<option value="zips124">10169</option>
-<option value="zips125">10168</option>
-<option value="zips126">11429</option>
-<option value="zips127">11428</option>
-<option value="zips128">11421</option>
-<option value="zips129">11420</option>
-<option value="zips130">11423</option>
-<option value="zips131">11422</option>
-<option value="zips132">11425</option>
-<option value="zips133">11424</option>
-<option value="zips134">11427</option>
-<option value="zips135">11426</option>
-<option value="zips136">10152</option>
-<option value="zips137">10153</option>
-<option value="zips139">10154</option>
-<option value="zips140">10310</option>
-<option value="zips141">10311</option>
-<option value="zips142">10312</option>
-<option value="zips143">10314</option>
-<option value="zips144">11231</option>
-<option value="zips145">10162</option>
-<option value="zips146">11238</option>
-<option value="zips147">11239</option>
-<option value="zips148">10019</option>
-<option value="zips149">10018</option>
-<option value="zips150">10271</option>
-<option value="zips151">10013</option>
-<option value="zips152">10012</option>
-<option value="zips153">10011</option>
-<option value="zips154">10010</option>
-<option value="zips155">10017</option>
-<option value="zips156">10016</option>
-<option value="zips157">11236</option>
-<option value="zips158">10014</option>
-<option value="zips159">11693</option>
-<option value="zips160">11432</option>
-<option value="zips161">11433</option>
-<option value="zips162">11430</option>
-<option value="zips163">11436</option>
-<option value="zips164">11694</option>
-<option value="zips165">11434</option>
-<option value="zips166">11435</option>
-<option value="zips167">10004</option>
-<option value="zips168">10005</option>
-<option value="zips169">10006</option>
-<option value="zips170">10007</option>
-<option value="zips171">10001</option>
-<option value="zips172">10002</option>
-<option value="zips173">10003</option>
-<option value="zips174">10167</option>
-<option value="zips175">11692</option>
-<option value="zips176">10165</option>
-<option value="zips177">10009</option>
-<option value="zips178">10279</option>
-<option value="zips179">10278</option>
-<option value="zips180">10475</option>
-<option value="zips181">10474</option>
-<option value="zips182">10471</option>
-<option value="zips183">10470</option>
-<option value="zips184">10473</option>
-<option value="zips185">10472</option>
-<option value="zips186">11691</option>
-<option value="zips187">11226</option>
-<option value="zips188">10170</option>
-<option value="zips189">10171</option>
-<option value="zips190">10172</option>
-<option value="zips191">10173</option>
-<option value="zips192">10174</option>
-<option value="zips193">10177</option>
-<option value="zips194">10466</option>
-<option value="zips195">10467</option>
-<option value="zips196">10464</option>
-<option value="zips197">10465</option>
-<option value="zips198">10462</option>
-<option value="zips199">10463</option>
-<option value="zips200">10460</option>
-<option value="zips201">10461</option>
-<option value="zips202">10468</option>
-<option value="zips203">10469</option>
-<option value="zips204">11411</option>
-<option value="zips205">11412</option>
-<option value="zips206">11413</option>
-<option value="zips207">11414</option>
-<option value="zips208">11415</option>
-<option value="zips209">11416</option>
-<option value="zips210">11417</option>
-<option value="zips211">11418</option>
-<option value="zips212">11419</option>
-<option value="zips213">11105</option>
+<option value="11432">11432</option>
+<option value="10069">10069</option>
+<option value="10453">10453</option>
+<option value="10013">10013</option>
+<option value="10451">10451</option>
+<option value="10457">10457</option>
+<option value="10456">10456</option>
+<option value="10455">10455</option>
+<option value="10012">10012</option>
+<option value="10459">10459</option>
+<option value="11361">11361</option>
+<option value="11232">11232</option>
+<option value="10103">10103</option>
+<option value="11204">11204</option>
+<option value="10010">10010</option>
+<option value="11385">11385</option>
+<option value="10017">10017</option>
+<option value="10016">10016</option>
+<option value="11237">11237</option>
+<option value="11218">11218</option>
+<option value="10282">10282</option>
+<option value="10280">10280</option>
+<option value="10119">10119</option>
+<option value="10115">10115</option>
+<option value="10112">10112</option>
+<option value="10110">10110</option>
+<option value="10111">10111</option>
+<option value="11109">11109</option>
+<option value="11379">11379</option>
+<option value="11378">11378</option>
+<option value="10452">10452</option>
+<option value="11375">11375</option>
+<option value="11374">11374</option>
+<option value="11377">11377</option>
+<option value="11101">11101</option>
+<option value="11371">11371</option>
+<option value="11370">11370</option>
+<option value="11373">11373</option>
+<option value="10199">10199</option>
+<option value="11102">11102</option>
+<option value="11103">11103</option>
+<option value="11229">11229</option>
+<option value="10040">10040</option>
+<option value="11106">11106</option>
+<option value="10029">10029</option>
+<option value="10044">10044</option>
+<option value="11201">11201</option>
+<option value="11203">11203</option>
+<option value="10128">10128</option>
+<option value="11205">11205</option>
+<option value="11104">11104</option>
+<option value="11207">11207</option>
+<option value="11226">11226</option>
+<option value="11209">11209</option>
+<option value="11208">11208</option>
+<option value="11372">11372</option>
+<option value="11225">11225</option>
+<option value="11224">11224</option>
+<option value="11368">11368</option>
+<option value="11369">11369</option>
+<option value="11366">11366</option>
+<option value="11223">11223</option>
+<option value="11364">11364</option>
+<option value="11365">11365</option>
+<option value="11362">11362</option>
+<option value="11363">11363</option>
+<option value="11360">11360</option>
+<option value="11222">11222</option>
+<option value="11221">11221</option>
+<option value="11220">11220</option>
+<option value="11212">11212</option>
+<option value="11213">11213</option>
+<option value="11210">11210</option>
+<option value="11211">11211</option>
+<option value="10039">10039</option>
+<option value="10038">10038</option>
+<option value="11214">11214</option>
+<option value="11215">11215</option>
+<option value="10035">10035</option>
+<option value="10034">10034</option>
+<option value="10037">10037</option>
+<option value="10036">10036</option>
+<option value="10031">10031</option>
+<option value="10030">10030</option>
+<option value="10033">10033</option>
+<option value="10032">10032</option>
+<option value="11359">11359</option>
+<option value="11358">11358</option>
+<option value="11005">11005</option>
+<option value="11004">11004</option>
+<option value="11697">11697</option>
+<option value="11351">11351</option>
+<option value="11357">11357</option>
+<option value="11356">11356</option>
+<option value="11355">11355</option>
+<option value="11354">11354</option>
+<option value="11216">11216</option>
+<option value="11451">11451</option>
+<option value="11217">11217</option>
+<option value="10309">10309</option>
+<option value="10308">10308</option>
+<option value="10307">10307</option>
+<option value="10306">10306</option>
+<option value="10305">10305</option>
+<option value="10304">10304</option>
+<option value="10303">10303</option>
+<option value="10302">10302</option>
+<option value="10301">10301</option>
+<option value="10028">10028</option>
+<option value="11228">11228</option>
+<option value="10026">10026</option>
+<option value="10027">10027</option>
+<option value="10024">10024</option>
+<option value="10025">10025</option>
+<option value="10022">10022</option>
+<option value="10023">10023</option>
+<option value="10020">10020</option>
+<option value="10021">10021</option>
+<option value="11219">11219</option>
+<option value="10169">10169</option>
+<option value="10168">10168</option>
+<option value="11429">11429</option>
+<option value="11428">11428</option>
+<option value="11421">11421</option>
+<option value="11420">11420</option>
+<option value="11423">11423</option>
+<option value="11422">11422</option>
+<option value="11425">11425</option>
+<option value="11424">11424</option>
+<option value="11427">11427</option>
+<option value="11426">11426</option>
+<option value="10152">10152</option>
+<option value="10153">10153</option>
+<option value="10154">10154</option>
+<option value="10310">10310</option>
+<option value="10311">10311</option>
+<option value="10312">10312</option>
+<option value="10314">10314</option>
+<option value="10162">10162</option>
+<option value="11238">11238</option>
+<option value="11239">11239</option>
+<option value="10019">10019</option>
+<option value="10018">10018</option>
+<option value="10271">10271</option>
+<option value="11230">11230</option>
+<option value="11231">11231</option>
+<option value="10011">10011</option>
+<option value="11233">11233</option>
+<option value="11234">11234</option>
+<option value="11235">11235</option>
+<option value="11236">11236</option>
+<option value="10014">10014</option>
+<option value="11693">11693</option>
+<option value="10454">10454</option>
+<option value="11433">11433</option>
+<option value="11430">11430</option>
+<option value="11436">11436</option>
+<option value="11694">11694</option>
+<option value="11434">11434</option>
+<option value="11435">11435</option>
+<option value="10004">10004</option>
+<option value="10005">10005</option>
+<option value="10006">10006</option>
+<option value="10007">10007</option>
+<option value="10001" selected = "selected">10001</option>
+<option value="10002">10002</option>
+<option value="10003">10003</option>
+<option value="10167">10167</option>
+<option value="11692">11692</option>
+<option value="10165">10165</option>
+<option value="11206">11206</option>
+<option value="10009">10009</option>
+<option value="10279">10279</option>
+<option value="10278">10278</option>
+<option value="10475">10475</option>
+<option value="10474">10474</option>
+<option value="10471">10471</option>
+<option value="10470">10470</option>
+<option value="10473">10473</option>
+<option value="10472">10472</option>
+<option value="11691">11691</option>
+<option value="10170">10170</option>
+<option value="10171">10171</option>
+<option value="10172">10172</option>
+<option value="10173">10173</option>
+<option value="10174">10174</option>
+<option value="10177">10177</option>
+<option value="10466">10466</option>
+<option value="10467">10467</option>
+<option value="10464">10464</option>
+<option value="10465">10465</option>
+<option value="10462">10462</option>
+<option value="10463">10463</option>
+<option value="10460">10460</option>
+<option value="10461">10461</option>
+<option value="10468">10468</option>
+<option value="10469">10469</option>
+<option value="11411">11411</option>
+<option value="11412">11412</option>
+<option value="11413">11413</option>
+<option value="11414">11414</option>
+<option value="11415">11415</option>
+<option value="11416">11416</option>
+<option value="11417">11417</option>
+<option value="11418">11418</option>
+<option value="11419">11419</option>
+<option value="10458">10458</option>
+<option value="11105">11105</option>
+<option value="11367">11367</option>
   </select> 
 
     
 <script type="text/javascript">
-var w = 100,
-    h = 100
-;
+    
+    
+    var margin = {top: 20, right: 0, bottom: 70, left: 0},
+    width = 500 - margin.left - margin.right,
+    height = 100 - margin.top - margin.bottom;
 
-var color = d3.scale.ordinal()
-            .range(['#1459D9', '#daa520']);
+// Parse the date / time
+
+var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
+
+var y = d3.scale.linear().range([height, 0]);
 
 
-var ds1 = [{x:0,y:12},{x:0,y:45}];
-var ds2 = [{x:0,y:72},{x:0,y:28}];
-var ds3 = [{x:0,y:82},{x:0,y:18}];
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", 
+          "translate(" + margin.left + "," + margin.top + ")");
+    
+  
+ 
+
+    
+    
+    
+    
+        
+    
+    
+
+//var str1 = "./Small/";
+//var str2 = ".csv";
+var ds1 = '2015-01-01';
+var ds2 = '10001';
+
+var ds3 = ds1.concat(ds2);
+//ds3 = str1.concat(ds3);
+//ds3 = ds3.concat(str2);
+    svg.append("text")
+    .attr("x", 500 )
+    .attr("y", 0)
+    .style("text-anchor", "middle")
+    .text("Title of Diagram");
 
 
-// config, add svg
-var canvas = d3.select('body')
-    .append('svg')
-    .attr('width',100)
-    .attr('height',100) 
-    .append('g');
+
 
 
 // function that wraps around the d3 pattern (bind, add, update, remove)
 function updateLegend(newData) {
 
     // bind data
-    var appending = canvas.selectAll('rect')
-       .data(newData);
+    var str1 = "./data/Small/"
+    var str2 = ".csv"
+    var str3 = str1.concat(newData)
+    var newData = str3.concat(str2)
+    
 
-    // add new elements
-    appending.enter().append('rect');
+    
+        var svg = dimple.newSvg("body", 800, 600);
 
-    // update existing elements
-    appending.transition()
-        .duration(0)
-        .style("fill", function(d,i){return color(i);})
-        .attr("x",10)
-        .attr("y",10)
-        .attr("width",function (d) {return d.y; })//d.y;})
-        .attr("height",19);
-
-    // remove old elements
-    appending.exit().remove();
-
-}
+    d3.csv(newData, function(data){
+        var myChart = new dimple.chart(svg,data);
+        //myChart.setbounds(60,30,510,305)
+        var x = myChart.addCategoryAxis("x","Hashtag");
+        myChart.addMeasureAxis("y","Count");
+        myChart.addSeries(null, dimple.plot.bar);
+        myChart.draw();
+        
+        d3.select("svg").remove();
+        //myChart.exit();
+        
+    });
+    
+};
 
 // generate initial legend
-updateLegend(ds2);
+updateLegend(ds3);
 
 // handle on click event
-d3.select('#opts')
+
+
+
+d3.select('#opts1')
+    .style("background-color","purple")
+    .style("color","white")
   .on('change', function() {
-    var newData = eval(d3.select(this).property('value'));
-    updateLegend(newData);
+      
+    var n = eval(d3.select(this).property('value'));
+    dates = ds1.concat(n);
+
+    ds2 = n;
+
+    updateLegend(dates);
 });
+
+d3.select('#opts2')
+    .style("background-color","purple")
+    .style("color","white")
+    .on('change', function(){
+    var n = d3.select(this).property('value');
+    m = String(n);
+    //document.write(n)
+    dates = m.concat(ds2);
+    ds1 = String(n);
+    updateLegend(dates);
+});
+
+
  </script>      
 </body>
 </html>

@@ -1,0 +1,26 @@
+<head>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    var svg = dimple.newSvg("body", 800, 600);
+    //var data = [
+    //  { "Word":"Hello", "Awesomeness":2000 },
+    //  { "Word":"World", "Awesomeness":3000 }
+    //];
+    d3.csv("./data/Small/2014-11-0310001.csv", function(data){
+        var myChart = new dimple.chart(svg,data);
+        //myChart.setbounds(60,30,510,305)
+        var x = myChart.addCategoryAxis("x","Hashtag");
+        myChart.addMeasureAxis("y","Count");
+        myChart.addSeries(null, dimple.plot.bar);
+        myChart.draw();
+    });
+    //var chart = new dimple.chart(svg, data);
+    //chart.addCategoryAxis("x", "Word");
+    //chart.addMeasureAxis("y", "Awesomeness");
+    //chart.addSeries(null, dimple.plot.bar);
+    //chart.draw();
+  </script>
+</body>
